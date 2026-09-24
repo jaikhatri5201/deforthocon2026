@@ -1,0 +1,218 @@
+{
+  "Dr Mahesh Kulkarni": {
+    "order": 1,
+    "role": "Speaker",
+    "affiliation": "DMH,Pune",
+    "topics": "Special Session - Keynote address"
+  },
+  "Maj Gen A D Sud": {
+    "order": 2,
+    "role": "Chairperson and speaker",
+    "affiliation": "Army Hospital R & R",
+    "topics": "Day 1 Session 1; Day 2 Session 1 - What and how to recreate in a Total Hip Replacement"
+  },
+  "Dr Vijay Kumar": {
+    "order": 3,
+    "role": "Chairperson and speaker",
+    "affiliation": "AIIMS, Delhi",
+    "topics": "Day 1 Session 1; Day 1 Session 2 - Step by step approach for the valgus knee; Day 2 Session 3 - Management Algorithm: Stiff and ankylosed hips"
+  },
+  "Prof Divya Prakash": {
+    "order": 4,
+    "role": "Chairperson and speaker",
+    "affiliation": "UK Based",
+    "topics": "Day 1 Session 1 - Degenerative Joint Disorders: Spectrum and treatment ladder; Day 1 Session 4 debate - Mobile bearing versus fixed bearing Uni; Day 2 Session 4 chairperson"
+  },
+  "Dr Mukund": {
+    "order": 5,
+    "role": "Speaker",
+    "affiliation": "AIIMS Nagpur",
+    "topics": "Day 1 Session 1 - The Biomechanics of Joint Degeneration"
+  },
+  "Dr Mohit Upadhyay": {
+    "order": 6,
+    "role": "Speaker",
+    "affiliation": "Upadhyaya Nursing Home,Mumbai",
+    "topics": "Day 1 Session 1 – Recent Technological Advances: Medical and Surgical"
+  },
+  "Col Manish Prasad, VSM": {
+    "order": 7,
+    "role": "Speaker",
+    "affiliation": "Base Hospital Delhi Cantt",
+    "topics": "Day 1 Session 1 - Controversies: Role of Visco-supplementation, PRP, HTO and PFO"
+  },
+  "Col Ashish Pande": {
+    "order": 8,
+    "role": "Chairperson and speaker",
+    "affiliation": "Army Hospital (R&R)",
+    "topics": "Day 1 Session 1 - Operative versus non-operative management; Day 2 Session 1 - Choosing the right cup; Day 2 Session 3 chairperson"
+  },
+  "Dr Kartik Shukla": {
+    "order": 9,
+    "role": "Speaker",
+    "affiliation": "K D Sons Orthopaedic clinic, Ahmedabad",
+    "topics": "Day 1 Session 1 - Humanics; Day 1 Session 4 debate - Mobile bearing versus fixed bearing Uni"
+  },
+  "Brig B Harikrishnan": {
+    "order": 10,
+    "role": "Chairperson",
+    "affiliation": "AFMC, Pune",
+    "topics": "Day 1 Session 2 - Tackling the knee deformity"
+  },
+  "Lt Col P Prabhakar (Retd.)": {
+    "order": 11,
+    "role": "Chairperson and speaker",
+    "affiliation": "CARE Hospital, Hyderabad",
+    "topics": "Day 1 Session 2 chairperson; Day 2 Session 3 - Management Algorithm: Protrusio"
+  },
+  "Dr Hemant Wakankar": {
+    "order": 12,
+    "role": "Speaker",
+    "affiliation": "DMH, Pune",
+    "topics": "Day 1 Session 2 - How I approach complex varus deformities"
+  },
+  "Dr Amit Swamy": {
+    "order": 13,
+    "role": "Speaker",
+    "affiliation": "PGIYCMH, Pune",
+    "topics": "Day 1 Session 2 - How I deal with fixed flexion deformity; Day 1 Session 4 debate - Robot or old school?"
+  },
+  "Dr Abhishek Patil": {
+    "order": 14,
+    "role": "Speaker",
+    "affiliation": "Apollo Hospital, Pune",
+    "topics": "Day 1 Session 2 - Planning for extraarticular deformities"
+  },
+  "Maj Gen N C Arora (Retd.)": {
+    "order": 15,
+    "role": "Chairperson",
+    "affiliation": "Apollo clinic, Sohna Road,Gurugram",
+    "topics": "Day 1 Session 3 - Managing the defects"
+  },
+  "Dr Vinayak Ghanate": {
+    "order": 17,
+    "role": "Speaker",
+    "affiliation": "Manipal hospital, Pune",
+    "topics": "Day 1 Session 3 - Classification and Principles of managing bone defects in TKA; Day 2 Session 4 - Diagnosing PJI and recent advances"
+  },
+  "Dr Kunal Bansal": {
+    "order": 18,
+    "role": "Speaker",
+    "affiliation": "Apollo Hospital, Pune",
+    "topics": "Day 1 Session 3 - Choice between Augments, sleeves, and cones; Day 2 Session 4 - Revision strategy"
+  },
+  "Col Rohit Vikas": {
+    "order": 19,
+    "role": "Speaker",
+    "affiliation": "AH R&R",
+    "topics": "Day 1 Session 3 - Revision knee: Tips and Tricks"
+  },
+  "Maj Gen G R Joshi (Retd.)": {
+    "order": 20,
+    "role": "Chairperson",
+    "affiliation": "Bharti Vidyapeeth, Pune",
+    "topics": "Day 1 Session 4 - What is new?"
+  },
+  "Dr Vikrant Manhas": {
+    "order": 22,
+    "role": "Speaker",
+    "affiliation": "AIIMS, New Delhi",
+    "topics": "Day 1 Session 4 debate - Uni versus Total knee; Day 2 Session 2 - Direct Anterior approach to Hip (Relive)"
+  },
+  "Gp Capt Santosh Kumar": {
+    "order": 23,
+    "role": "Speaker",
+    "affiliation": "AF Hospital, Kanpur",
+    "topics": "Day 1 Session 4 debate - Uni versus Total knee; Day 2 Session 4 - Management algorithm for PJI"
+  },
+  "Brig Chetan Sood (Retd.)": {
+    "order": 24,
+    "role": "Speaker",
+    "affiliation": "Yashoda Hospital, Ghaziabad",
+    "topics": "Day 1 Session 4 - Personalized knee arthroplasty"
+  },
+  "Col Biraj Gogoi, VSM": {
+    "order": 25,
+    "role": "Chairperson and speaker",
+    "affiliation": "Army Hospital R & R",
+    "topics": "Day 1 Session 4 debate - Robot or old school? Day 2 Session 1 chairperson; Day 2 Shoulder Session - RTSA in Fracture Proximal Humerus"
+  },
+  "Lt Col Kamparsh Thakur": {
+    "order": 26,
+    "role": "Speaker",
+    "affiliation": "INHS ASVINI",
+    "topics": ""
+  },
+  "Lt Col Satish Kumar": {
+    "order": 27,
+    "role": "Chairperson and speaker",
+    "affiliation": "Base Hospital, Lucknow",
+    "topics": "Day 2 Session 1 - What stem should I use; Day 2 Shoulder Session chairperson"
+  },
+  "Col Narinder Kumar (Retd.)": {
+    "order": 28,
+    "role": "Speaker",
+    "affiliation": "Apollo Hospital, Lucknow",
+    "topics": "Day 2 Session 1 - Bearing surfaces and recent advances"
+  },
+  "Col Munish Sood": {
+    "order": 29,
+    "role": "Chairperson",
+    "affiliation": "Base Hospital, Lucknow",
+    "topics": "Day 2 Session 2 - Approaching the hip"
+  },
+  "Lt Col Saurabh Sharma": {
+    "order": 30,
+    "role": "Speaker",
+    "affiliation": "Army Hospital (R&R)",
+    "topics": "Day 2 Session 2 debate - Posterior or Direct anterior approach; Day 2 Shoulder Session - Hemi and Total Shoulder: Relevant or irrelevant"
+  },
+  "Dr Saurabh Giri": {
+    "order": 31,
+    "role": "Speaker",
+    "affiliation": "Helios Orthojoint, Pune",
+    "topics": "Day 2 Session 2 debate - Posterior or Direct anterior approach"
+  },
+  "Col Ravindra Chauhan": {
+    "order": 32,
+    "role": "Chairperson",
+    "affiliation": "MH Barrackpore",
+    "topics": "Day 2 Session 3 - Complex primary THR"
+  },
+  "Wg Cdr Prashant Pratim Padhi": {
+    "order": 33,
+    "role": "Speaker",
+    "affiliation": "AF Hospital, Bangalore",
+    "topics": "Day 2 Session 3 - Management Algorithm: Dysplastic hip"
+  },
+  "Dr Abhijit Agashe": {
+    "order": 34,
+    "role": "Speaker",
+    "affiliation": "Manipal Hospital, Baner",
+    "topics": "Day 2 Session 3 - Spinopelvic alignment in THR"
+  },
+  "Col R S Parmar": {
+    "order": 35,
+    "role": "Chairperson",
+    "affiliation": "Military Hospital Khadki",
+    "topics": "Day 2 Session 4 - Prosthetic Joint Infection"
+  },
+  "Lt Col Tushar Gogia": {
+    "order": 36,
+    "role": "Chairperson",
+    "affiliation": "Military Hospital Khadki",
+    "topics": "Day 2 Shoulder Session"
+  },
+  "Lt Col Varun Vig": {
+    "order": 37,
+    "role": "Speaker",
+    "affiliation": "Base Hospital, Lucknow",
+    "topics": "Day 2 Shoulder Session - ABCD of reverse shoulder replacement"
+  },
+  "Dr Ashish Babhulkar": {
+    "order": 38,
+    "role": "Speaker",
+    "affiliation": "DMH, Pune",
+    "topics": "Day 2 Shoulder Session - Pre Op Planning for RTSA"
+  }
+}

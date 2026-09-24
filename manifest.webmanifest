@@ -1,0 +1,17 @@
+{
+  "name": "DEFORTHOCON 2026 – MH Khadki",
+  "short_name": "DEFORTHOCON",
+  "description": "Conference companion for the Orthopaedics CME at Military Hospital Khadki, 16–17 October 2026.",
+  "id": "./",
+  "start_url": "./?source=installed",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff8ec",
+  "theme_color": "#6f1523",
+  "icons": [
+    {"src":"assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"assets/icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

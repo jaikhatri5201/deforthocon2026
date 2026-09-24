@@ -1,0 +1,619 @@
+{
+  "title": "DEFORTHOCON 2026",
+  "longTitle": "Degenerative Joint Disorders – The Evolutionary Trends in Their Management & Recent Advances in Arthroplasty",
+  "subtitle": "Inter Command Orthopaedics CME",
+  "dates": "16–17 October 2026",
+  "venue": "Chaitanya Auditorium, Military Hospital Khadki, Pune",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Military+Hospital+Khadki+Pune",
+  "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfJPyopwxFpvQ00Wq_r0_UbZmZE1pOa4qC04E4SJSR-jJFpZw/viewform?usp=publish-editor",
+  "registrationNote": "Registration form and payment are hosted externally. Please verify the details on the form before submitting.",
+  "brochure": "assets/DEFORTHOCON_2026_brochure.pdf",
+  "sourceNote": "Programme transcribed from the finalised four-page conference brochure. Further updates are expected.",
+  "contact": [
+    {
+      "name": "Lt Col Tushar Gogia",
+      "role": "Organising Secretary",
+      "tel": "9598122122"
+    },
+    {
+      "name": "Lt Col Sunil Hegde",
+      "role": "Treasurer",
+      "tel": "9545532361"
+    }
+  ],
+  "committee": [
+    {
+      "role": "Organising Chairperson",
+      "names": [
+        "Brig Vishal Sondhi"
+      ]
+    },
+    {
+      "role": "Convenor",
+      "names": [
+        "Col R S Parmar"
+      ]
+    },
+    {
+      "role": "Co-Convenor",
+      "names": [
+        "Col Vyom Sharma"
+      ]
+    },
+    {
+      "role": "Scientific Committee",
+      "names": [
+        "Surg Cdr Sunit Wani",
+        "Lt Col Vivek Mathew Philip",
+        "Sqn Ldr R Anand"
+      ]
+    },
+    {
+      "role": "Treasurer",
+      "names": [
+        "Lt Col Sunil Hegde"
+      ]
+    },
+    {
+      "role": "Organising Secretary",
+      "names": [
+        "Lt Col Tushar Gogia"
+      ]
+    },
+    {
+      "role": "Joint Organising Secretaries",
+      "names": [
+        "Lt Col J P Khatri",
+        "Surg Cdr Sanjay Puri",
+        "Surg Lt Cdr R Nagarajan"
+      ]
+    },
+    {
+      "role": "POS Secretary",
+      "names": [
+        "Dr Kunal Bansal"
+      ]
+    }
+  ],
+  "featured": [
+    {
+      "name": "Air Marshal Sandeep Thareja, SM, VSM & Bar",
+      "role": "Chief Guest"
+    },
+    {
+      "name": "Dr Mahesh Kulkarni",
+      "role": "Keynote Address"
+    },
+    {
+      "name": "Prof Divya Prakash",
+      "role": "International Faculty"
+    }
+  ],
+  "days": [
+    {
+      "label": "Day 1",
+      "date": "Friday, 16 October",
+      "sessions": [
+        {
+          "title": "Inauguration",
+          "time": "08:30–09:30",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "08:30–09:00",
+              "title": "Registration",
+              "speakers": [],
+              "kind": "logistics"
+            },
+            {
+              "time": "09:00–09:05",
+              "title": "Arrival of dignitaries",
+              "speakers": [],
+              "kind": "logistics"
+            },
+            {
+              "time": "09:05–09:15",
+              "title": "Inauguration of CME",
+              "speakers": [],
+              "kind": "logistics"
+            },
+            {
+              "time": "09:15–09:23",
+              "title": "Welcome address by Chief Patron",
+              "speakers": [
+                "Surg V Adm Manish Honwad, VSM"
+              ]
+            },
+            {
+              "time": "09:23–09:30",
+              "title": "Vote of Thanks",
+              "speakers": [
+                "Brig Vishal Sondhi"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Insights From the Leaders",
+          "time": "09:30–11:00",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "09:30–10:00",
+              "title": "Address by Chief Guest",
+              "speakers": [
+                "Air Marshal Sandeep Thareja, SM, VSM & Bar"
+              ]
+            },
+            {
+              "time": "10:00–10:30",
+              "title": "Keynote Address",
+              "speakers": [
+                "Dr Mahesh Kulkarni"
+              ]
+            },
+            {
+              "time": "10:30–11:00",
+              "title": "High Tea",
+              "speakers": [],
+              "kind": "break"
+            }
+          ]
+        },
+        {
+          "title": "Session 1 · Degenerative Joint Disorders – Where do we stand?",
+          "time": "11:00–12:30",
+          "chairs": [
+            "Maj Gen A D Sud",
+            "Dr Vijay Kumar"
+          ],
+          "entries": [
+            {
+              "time": "11:00–11:15",
+              "title": "Degenerative Joint Disorders: Spectrum and treatment ladder",
+              "speakers": [
+                "Lt Col Kamparsh Thakur"
+              ]
+            },
+            {
+              "time": "11:15–11:30",
+              "title": "The Biomechanics of Joint Degeneration",
+              "speakers": [
+                "Dr Mukund Madhav Ojha"
+              ]
+            },
+            {
+              "time": "11:30–11:45",
+              "title": "Degenerative Joint Disorders: Management in serving soldier",
+              "speakers": [
+                "Lt Col Saurabh Sharma"
+              ]
+            },
+            {
+              "time": "11:45–12:00",
+              "title": "Controversies: Visco-supplementation, PRP, HTO and PFO",
+              "speakers": [
+                "Col Manish Prasad, VSM"
+              ]
+            },
+            {
+              "time": "12:00–12:15",
+              "title": "Recent Technological Advances: Medical and Surgical",
+              "speakers": [
+                "Dr Mohit Upadhyay"
+              ]
+            },
+            {
+              "time": "12:15–12:30",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Session 2 · Tackling the Knee Deformity",
+          "time": "12:30–14:00",
+          "chairs": [
+            "Brig B Harikrishnan",
+            "Lt Col P Prabhakar (Retd.)"
+          ],
+          "entries": [
+            {
+              "time": "12:30–12:50",
+              "title": "How I approach complex varus deformities",
+              "speakers": [
+                "Dr Hemant Wakankar"
+              ]
+            },
+            {
+              "time": "12:50–13:10",
+              "title": "Step by step approach for the valgus knee",
+              "speakers": [
+                "Dr Vijay Kumar"
+              ]
+            },
+            {
+              "time": "13:10–13:30",
+              "title": "How I deal with fixed flexion deformity",
+              "speakers": [
+                "Dr Amit Swamy"
+              ]
+            },
+            {
+              "time": "13:30–13:50",
+              "title": "Planning for extra-articular deformities",
+              "speakers": [
+                "Dr Abhishek Patil"
+              ]
+            },
+            {
+              "time": "13:50–14:00",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Lunch",
+          "time": "14:00–15:00",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "14:00–15:00",
+              "title": "Lunch",
+              "speakers": [],
+              "kind": "break"
+            }
+          ]
+        },
+        {
+          "title": "Session 3 · Managing the Defects",
+          "time": "15:00–16:00",
+          "chairs": [
+            "Maj Gen N C Arora (Retd.)",
+            "Dr Eknath Pawar"
+          ],
+          "entries": [
+            {
+              "time": "15:00–15:15",
+              "title": "Classification and Principles of managing bone defects in TKA",
+              "speakers": [
+                "Dr Vinayak Ghanate"
+              ]
+            },
+            {
+              "time": "15:15–15:30",
+              "title": "Choice between Augments, sleeves, and cones",
+              "speakers": [
+                "Dr Kunal Bansal"
+              ]
+            },
+            {
+              "time": "15:30–15:45",
+              "title": "Revision knee: Tips and Tricks",
+              "speakers": [
+                "Col Rohit Vikas"
+              ]
+            },
+            {
+              "time": "15:45–16:00",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Session 4 · What is New?",
+          "time": "16:00–17:30",
+          "chairs": [
+            "Maj Gen G R Joshi (Retd.)",
+            "Maj Gen V K Sinha, VSM (Retd.)"
+          ],
+          "entries": [
+            {
+              "time": "16:00–16:20",
+              "title": "Debate: Mobile bearing versus fixed bearing Uni",
+              "speakers": [
+                "Gp Capt Santosh Kumar",
+                "Prof Divya Prakash"
+              ]
+            },
+            {
+              "time": "16:20–16:40",
+              "title": "Debate: Uni versus Total knee",
+              "speakers": [
+                "Dr Vikrant Manhas",
+                "Lt Col Saurabh Sharma"
+              ]
+            },
+            {
+              "time": "16:40–17:00",
+              "title": "Lateral Uni",
+              "speakers": [
+                "Prof Divya Prakash"
+              ]
+            },
+            {
+              "time": "17:00–17:20",
+              "title": "Debate: Robot or old school?",
+              "speakers": [
+                "Dr Saurabh Giri",
+                "Col Biraj Gogoi, VSM"
+              ]
+            },
+            {
+              "time": "17:20–17:30",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Gala Dinner",
+          "time": "19:30 onwards",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "19:30 onwards",
+              "title": "Gala Dinner · Officers’ Mess, MH Khadki",
+              "speakers": [],
+              "kind": "break"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Day 2",
+      "date": "Saturday, 17 October",
+      "sessions": [
+        {
+          "title": "Session 1 · Hip – Getting the Basics Right",
+          "time": "08:30–10:00",
+          "chairs": [
+            "Col M E Luther (Retd.)",
+            "Col Biraj Gogoi, VSM"
+          ],
+          "entries": [
+            {
+              "time": "08:30–08:45",
+              "title": "What and how to recreate in a Total Hip Replacement",
+              "speakers": [
+                "Col Ashish Pande"
+              ]
+            },
+            {
+              "time": "08:45–09:00",
+              "title": "Choosing the right cup",
+              "speakers": [
+                "Maj Gen A D Sud"
+              ]
+            },
+            {
+              "time": "09:00–09:15",
+              "title": "What stem should I use",
+              "speakers": [
+                "Lt Col Satish Kumar"
+              ]
+            },
+            {
+              "time": "09:15–09:30",
+              "title": "Bearing surfaces and recent advances",
+              "speakers": [
+                "Brig Narinder Kumar (Retd.)"
+              ]
+            },
+            {
+              "time": "09:30–09:45",
+              "title": "Personalised Arthroplasty",
+              "speakers": [
+                "Brig Chetan Sood (Retd.)"
+              ]
+            },
+            {
+              "time": "09:45–10:00",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Session 2 · Approaching the Hip",
+          "time": "10:00–11:00",
+          "chairs": [
+            "Col Munish Sood",
+            "Lt Col P Prabhakar (Retd.)"
+          ],
+          "entries": [
+            {
+              "time": "10:00–10:30",
+              "title": "Direct Anterior approach to Hip (Relive)",
+              "speakers": [
+                "Dr Vikrant Manhas"
+              ]
+            },
+            {
+              "time": "10:30–11:00",
+              "title": "Debate: Posterior or Direct anterior approach",
+              "speakers": [
+                "Lt Col Saurabh Sharma",
+                "Dr Saurabh Giri"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tea",
+          "time": "11:00–11:30",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "11:00–11:30",
+              "title": "Tea",
+              "speakers": [],
+              "kind": "break"
+            }
+          ]
+        },
+        {
+          "title": "Session 3 · Complex Primary THR",
+          "time": "11:30–13:00",
+          "chairs": [
+            "Col Ashish Pande",
+            "Col Ravindra Chauhan"
+          ],
+          "entries": [
+            {
+              "time": "11:30–11:50",
+              "title": "Management Algorithm: Protrusio",
+              "speakers": [
+                "Lt Col P Prabhakar"
+              ]
+            },
+            {
+              "time": "11:50–12:10",
+              "title": "Management Algorithm: Dysplastic hip",
+              "speakers": [
+                "Wg Cdr Prashant Pratim Padhi"
+              ]
+            },
+            {
+              "time": "12:10–12:30",
+              "title": "Management Algorithm: Stiff and ankylosed hips",
+              "speakers": [
+                "Dr Vijay Kumar"
+              ]
+            },
+            {
+              "time": "12:30–12:50",
+              "title": "Spinopelvic alignment in THR",
+              "speakers": [
+                "Dr Abhijit Agashe"
+              ]
+            },
+            {
+              "time": "12:50–13:00",
+              "title": "Q & A",
+              "speakers": [],
+              "kind": "discussion"
+            }
+          ]
+        },
+        {
+          "title": "Session 4 · Prosthetic Joint Infection",
+          "time": "13:00–14:00",
+          "chairs": [
+            "Prof Divya Prakash",
+            "Col R S Parmar"
+          ],
+          "entries": [
+            {
+              "time": "13:00–13:15",
+              "title": "Diagnosing PJI and recent advances",
+              "speakers": [
+                "Dr Vinayak Ghanate"
+              ]
+            },
+            {
+              "time": "13:15–13:30",
+              "title": "Prevention and patient optimization",
+              "speakers": [
+                "Lt Col Kamparsh Thakur"
+              ]
+            },
+            {
+              "time": "13:30–13:45",
+              "title": "Management algorithm for PJI",
+              "speakers": [
+                "Gp Capt Santosh Kumar"
+              ]
+            },
+            {
+              "time": "13:45–14:00",
+              "title": "Revision strategy",
+              "speakers": [
+                "Dr Kunal Bansal"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Lunch",
+          "time": "14:00–15:00",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "14:00–15:00",
+              "title": "Lunch",
+              "speakers": [],
+              "kind": "break"
+            }
+          ]
+        },
+        {
+          "title": "Session 5 · Shoulder",
+          "time": "15:00–16:20",
+          "chairs": [
+            "Lt Col Satish Kumar",
+            "Lt Col Tushar Gogia"
+          ],
+          "entries": [
+            {
+              "time": "15:00–15:20",
+              "title": "ABCD of reverse shoulder replacement",
+              "speakers": [
+                "Lt Col Varun Vig"
+              ]
+            },
+            {
+              "time": "15:20–15:40",
+              "title": "Hemi and Total Shoulder: Relevant or irrelevant",
+              "speakers": [
+                "Lt Col Saurabh Sharma"
+              ]
+            },
+            {
+              "time": "15:40–16:00",
+              "title": "Pre-Op Planning for RTSA",
+              "speakers": [
+                "Dr Ashish Babhulkar"
+              ]
+            },
+            {
+              "time": "16:00–16:20",
+              "title": "RTSA in Fracture Proximal Humerus",
+              "speakers": [
+                "Col Biraj Gogoi, VSM"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Valedictory",
+          "time": "16:20 onwards",
+          "chairs": [],
+          "entries": [
+            {
+              "time": "16:20 onwards",
+              "title": "Valedictory",
+              "speakers": [],
+              "kind": "logistics"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "announcements": [
+    {
+      "date": "",
+      "heading": "Scientific programme",
+      "message": "The programme shown here follows the finalised brochure and may be revised. Reopen or refresh the app for the latest published version."
+    }
+  ]
+}
