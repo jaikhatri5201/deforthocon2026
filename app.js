@@ -60,7 +60,7 @@
     $('contact-list').innerHTML = d.contact.map(c => `<div class="contact-item"><span><strong>${esc(c.name)}</strong><small>${esc(c.role)}</small></span><a href="tel:${esc(c.tel.replace(/[^\d+]/g,''))}" aria-label="Call ${esc(c.name)}">Call ${esc(c.tel)}</a></div>`).join('');
   };
   const render = () => {renderProgramme();renderFaculty();renderUpdates();renderInfo();};
-  const SCREENS = ['home','programme','faculty','updates','info','brochure'];
+  const SCREENS = ['home','programme','faculty','updates','info','certificate','brochure'];
   const showScreen = (screen, focus = false) => {
     if (!SCREENS.includes(screen)) screen='home';
     for (const name of SCREENS) $('screen-'+name).classList.toggle('active',name === screen);
@@ -199,7 +199,7 @@
     document.querySelectorAll('[data-screen-target]').forEach(el=>el.addEventListener('click',()=>{location.hash=el.dataset.screenTarget;route();}));
     document.querySelectorAll('[data-open-brochure]').forEach(el=>el.addEventListener('click',()=>{
       const here = location.hash.replace(/^#/, '');
-      state.brochureReturn = here === 'info' ? 'info' : 'home';
+      state.brochureReturn = ['info','home','certificate'].includes(here) ? here : 'home';
     }));
     const closeBrochure = () => { location.hash = state.brochureReturn || 'home'; route(); };
     $('brochure-back').addEventListener('click',closeBrochure);

@@ -1,11 +1,11 @@
 // Bump this cache key when changing site assets. Network-first for programme/profile data.
-const CACHE = 'deforthocon-v5-device-install-guide';
+const CACHE = 'deforthocon-v6-programme-certificates';
 const APP_SHELL = [
-  './','./index.html','./style.css','./app.js','./manifest.webmanifest',
+  './','./index.html','./style.css','./app.js','./certificate.js','./manifest.webmanifest',
   './data.json','./faculty_profiles.json','./assets/icon-192.png',
   './assets/icon-512.png','./assets/icon-maskable.png',
   './assets/apple-touch-icon.png','./assets/registration-qr.png',
-  './assets/DEFORTHOCON_2026_brochure.pdf',
+  './assets/DEFORTHOCON_2026_Programme_4.pdf','./assets/certificate-template.png',
   './assets/brochure-pages/page-1.webp','./assets/brochure-pages/page-2.webp',
   './assets/brochure-pages/page-3.webp','./assets/brochure-pages/page-4.webp'
 ];
