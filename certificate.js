@@ -36,6 +36,8 @@ async function lookup(e){
  finally{btn.disabled=false;btn.textContent='Find my certificate';}
 }
 function loadImage(src){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src=src;});}
+// Apple Chancery is a device font; unavailable devices use an italic serif fallback.
+const attendeeNameFont='"Apple Chancery", Georgia, "Times New Roman", serif';
 function drawFittedText(ctx,text,{x,y,pt=85,minPt=45,width,color,font,weight=''}){
   let size=pt;
   ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=color;
@@ -66,13 +68,15 @@ async function download(){
  if(!cert)return;
  const btn=$('certificate-download');btn.disabled=true;btn.textContent='Preparing PDF…';
  try{
-  if(document.fonts?.load){try{await document.fonts.load('85px "Alex Brush"');}catch{}}
   const bg=await loadImage('assets/certificate-template.png');
   const c=document.createElement('canvas');c.width=bg.naturalWidth;c.height=bg.naturalHeight;
   const ctx=c.getContext('2d',{alpha:false});ctx.drawImage(bg,0,0,c.width,c.height);
   const w=c.width,h=c.height;
-  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.548,pt:w*.036,minPt:w*.021,width:w*.47,
-     color:'#840c26',font:'"Alex Brush", "Apple Chancery", Georgia, serif'});
+  // Convert the approved 30 pt name to pixels at the existing A4 PDF scale.
+  const nameSize=30*w/841.89;
+  if(document.fonts?.load){try{await document.fonts.load(`italic ${nameSize}px ${attendeeNameFont}`,cert.name);}catch{}}
+  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.548,pt:nameSize,minPt:w*.021,width:w*.47,
+     color:'#840c26',font:attendeeNameFont,weight:'italic'});
   drawFittedText(ctx,`as ${cert.category} to the academic success of the conference.`,{
      x:w*.52,y:h*.776,pt:w*.017,minPt:w*.013,width:w*.67,color:'#1d3054',font:'Georgia, "Times New Roman", serif',weight:'italic'});
   ctx.fillStyle='#3f3a34';ctx.textAlign='left';ctx.textBaseline='middle';
