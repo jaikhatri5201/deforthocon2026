@@ -19,9 +19,9 @@
   },
   "Col Manish Prasad, VSM": {
     "order": 4,
-    "role": "Speaker",
+    "role": "Chairperson and speaker",
     "affiliation": "Sr Adv Ortho, BHDC",
-    "topics": "Day 1: Controversies: Visco-supplementation, PRP, HTO and PFO"
+    "topics": "Day 1: Controversies: Visco-supplementation, PRP, HTO and PFO; Day 2: Chairperson — Session 1 · Hip – Getting the Basics Right"
   },
   "Brig B Harikrishnan": {
     "order": 5,
@@ -35,18 +35,6 @@
     "affiliation": "Senior Adv Orthopaedics and Joint Replacement Surgeon,7 AFH Kanpur",
     "topics": "Day 1: Debate: Mobile bearing versus fixed bearing Uni; Day 1: Chairperson — Session 4 · Managing the Defects; Day 2: Chairperson — Session 3 · Complex Primary THR; Day 2: Management algorithm for PJI"
   },
-  "Col Biraj Gogoi,VSM": {
-    "order": 7,
-    "role": "Chairperson and speaker",
-    "affiliation": "Commanding Officer ,162 MH",
-    "topics": "Day 1: Debate: Robot or old school?; Day 2: Chairperson — Session 1 · Hip – Getting the Basics Right; Day 2: RTSA in Fracture Proximal Humerus"
-  },
-  "Col Rohit Vikas": {
-    "order": 8,
-    "role": "Speaker",
-    "affiliation": "CO 2018 Fd Hospital",
-    "topics": "Day 1: Revision knee: Tips and Tricks"
-  },
   "Lt Col Satish Kumar": {
     "order": 9,
     "role": "Chairperson and speaker",
@@ -57,7 +45,7 @@
     "order": 10,
     "role": "Speaker",
     "affiliation": "Cl Spl ( Ortho) CHWC",
-    "topics": "Day 2: Bearing surfaces and recent advances; Day 2: Management Algorithm: Stiff and ankylosed hips"
+    "topics": "Day 1: Revision knee: Tips and Tricks; Day 2: Bearing surfaces and recent advances; Day 2: Management Algorithm: Stiff and ankylosed hips"
   },
   "Lt Col Ravindra Chauhan": {
     "order": 11,
@@ -69,13 +57,13 @@
     "order": 12,
     "role": "Speaker",
     "affiliation": "Cl Spl Orthopaedics and Trained in Joint Replacement Surgery",
-    "topics": "Day 2: Management Algorithm: Dysplastic hip"
+    "topics": "Day 1: Debate: Robot or old school?; Day 2: Management Algorithm: Dysplastic hip"
   },
   "Col R S Parmar": {
     "order": 13,
-    "role": "Chairperson",
+    "role": "Chairperson and speaker",
     "affiliation": "Senior Adv( Ortho) & HoD Dept of Orthopaedics, MH Khadki",
-    "topics": "Day 2: Chairperson — Session 4 · Prosthetic Joint Infection"
+    "topics": "Day 1: Vote of Thanks; Day 2: Chairperson — Session 4 · Prosthetic Joint Infection"
   },
   "Lt Col Tushar Gogia": {
     "order": 14,
@@ -94,48 +82,6 @@
     "role": "Speaker",
     "affiliation": "Cl Spl Orthopaedics",
     "topics": "Day 2: Hemi and Total Shoulder: Relevant or irrelevant"
-  },
-  "Maj Gen VK Sinha, VSM (Retd)": {
-    "order": 17,
-    "role": "Chairperson",
-    "affiliation": "",
-    "topics": "Day 1: Chairperson — Session 1 · Degenerative Joint Disorders – Where do we stand?"
-  },
-  "Maj Gen G R Joshi (Retd)": {
-    "order": 18,
-    "role": "Chairperson",
-    "affiliation": "Prof , Dept of orthopaedics BVP Pune",
-    "topics": "Day 1: Chairperson — Session 2 · Tackling the Knee Deformity"
-  },
-  "Lt Col P Prabhakar (Retd)": {
-    "order": 19,
-    "role": "Chairperson and speaker",
-    "affiliation": "Clinical Dir & Head,Dept of Orthopaedics and Joint replacement, Care Hospital Nampally, Hyderabad",
-    "topics": "Day 1: Chairperson — Session 3 · What is New?; Day 2: Chairperson — Session 2 · Approaching the Hip; Day 2: Management Algorithm: Protrusio"
-  },
-  "Maj Gen Amresh Ghai AVSM (Retd)": {
-    "order": 20,
-    "role": "Speaker",
-    "affiliation": "Sr Dir Orthopaedics, Max Hospital Noida",
-    "topics": "Day 1: Management of Difficult Primary Knees"
-  },
-  "Maj Gen N C Arora VSM** (Retd)": {
-    "order": 21,
-    "role": "Chairperson",
-    "affiliation": "Visiting Consultant Apollo Clinic, Sohna Road, Gurgaon",
-    "topics": "Day 1: Chairperson — Session 2 · Tackling the Knee Deformity"
-  },
-  "Col M E Luther(Retd)": {
-    "order": 22,
-    "role": "Chairperson",
-    "affiliation": "Director & Professor of Orthopaedics, Kamineni Institute of Medical Sciences",
-    "topics": "Day 1: Chairperson — Session 1 · Degenerative Joint Disorders – Where do we stand?"
-  },
-  "Brig Chetan Sood( Retd)": {
-    "order": 23,
-    "role": "Speaker",
-    "affiliation": "Director Joint Replacement and Orthopaedics Yashoda Hospital / Head Medical Education and Prof Training, Meril Lifesciences Pvt Ltd",
-    "topics": "Day 2: Personalised Arthroplasty"
   },
   "Dr Mukund Madhav Ojha": {
     "order": 24,
@@ -177,7 +123,7 @@
     "order": 30,
     "role": "Chairperson and speaker",
     "affiliation": "Senior Consultant, Dept of Trauma and Orthopaedics, Sandwell and West Birmingham Hospitals, NHS trust, West Bromwich, Birmingham",
-    "topics": "Day 1: Debate: Mobile bearing versus fixed bearing Uni; Day 1: Lateral Uni; Day 1: Shared Learning from the United Kingdom; Day 2: Chairperson — Session 4 · Prosthetic Joint Infection"
+    "topics": "Day 1: Shared Learning from the United Kingdom; Day 1: Debate: Mobile bearing versus fixed bearing Uni; Day 1: Lateral Uni; Day 2: Chairperson — Session 4 · Prosthetic Joint Infection"
   },
   "Dr Vikrant Manhas": {
     "order": 31,
@@ -233,21 +179,63 @@
     "affiliation": "HOD Shoulder Department at Deenanath Mangeshkar Hospital",
     "topics": "Day 2: Pre-Op Planning for RTSA"
   },
-  "Surg Vice Admiral Manish Honwad, VSM": {
-    "order": 40,
-    "role": "Chief Patron",
-    "affiliation": "",
-    "topics": "Day 1: Welcome Address by Chief Patron"
-  },
   "Brig Vishal Sondhi": {
     "order": 41,
     "role": "Organising Chairperson",
     "affiliation": "",
-    "topics": "Day 1: Vote of Thanks"
+    "topics": "Day 1: Welcome Address"
   },
-  "Air Marshal Sandeep Thareja, SM, VSM and Bar": {
-    "order": 42,
-    "role": "Chief Guest · DGAFMS",
+  "Brig Chetan Sood (Retd.)": {
+    "order": 23,
+    "role": "Speaker",
+    "affiliation": "Director Joint Replacement and Orthopaedics Yashoda Hospital / Head Medical Education and Prof Training, Meril Lifesciences Pvt Ltd",
+    "topics": "Day 2: Personalised Arthroplasty"
+  },
+  "Col Biraj Gogoi, VSM": {
+    "order": 7,
+    "role": "Speaker",
+    "affiliation": "Commanding Officer ,162 MH",
+    "topics": "Day 2: RTSA in Fracture Proximal Humerus"
+  },
+  "Col M E Luther (Retd.)": {
+    "order": 22,
+    "role": "Chairperson",
+    "affiliation": "Director & Professor of Orthopaedics, Kamineni Institute of Medical Sciences",
+    "topics": "Day 1: Chairperson — Session 1 · Degenerative Joint Disorders – Where do we stand?"
+  },
+  "Lt Col P Prabhakar (Retd.)": {
+    "order": 19,
+    "role": "Chairperson and speaker",
+    "affiliation": "Clinical Dir & Head,Dept of Orthopaedics and Joint replacement, Care Hospital Nampally, Hyderabad",
+    "topics": "Day 1: Chairperson — Session 3 · What is New?; Day 2: Chairperson — Session 2 · Approaching the Hip; Day 2: Management Algorithm: Protrusio"
+  },
+  "Maj Gen Amresh Ghai, AVSM (Retd.)": {
+    "order": 20,
+    "role": "Speaker",
+    "affiliation": "Sr Dir Orthopaedics, Max Hospital Noida",
+    "topics": "Day 1: Management of Difficult Primary Knees"
+  },
+  "Maj Gen G R Joshi (Retd.)": {
+    "order": 18,
+    "role": "Chairperson",
+    "affiliation": "Prof , Dept of orthopaedics BVP Pune",
+    "topics": "Day 1: Chairperson — Session 2 · Tackling the Knee Deformity"
+  },
+  "Maj Gen N C Arora, VSM** (Retd.)": {
+    "order": 21,
+    "role": "Chairperson",
+    "affiliation": "Visiting Consultant Apollo Clinic, Sohna Road, Gurgaon",
+    "topics": "Day 1: Chairperson — Session 2 · Tackling the Knee Deformity"
+  },
+  "Maj Gen V K Sinha, VSM (Retd.)": {
+    "order": 17,
+    "role": "Chairperson",
+    "affiliation": "",
+    "topics": "Day 1: Chairperson — Session 1 · Degenerative Joint Disorders – Where do we stand?"
+  },
+  "Surg VAdm Manish Honwad, VSM": {
+    "order": 40,
+    "role": "Chief Guest",
     "affiliation": "",
     "topics": "Day 1: Address by Chief Guest"
   }

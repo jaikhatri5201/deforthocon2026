@@ -37,7 +37,7 @@
         const speakerLine = e.speakers.length ? `<p>${e.speakers.map(esc).join(' / ')}</p>` : '';
         return `<div class="talk ${esc(e.kind || '')}"><time>${esc(e.time)}</time><div><h3>${esc(e.title)}</h3>${speakerLine}</div></div>`;
       }).join('');
-      return `<article class="session-card"><div class="session-heading"><h2>${esc(s.title)}</h2><span>${esc(s.time)} h</span></div>${chairs}${entries}</article>`;
+      return `<article class="session-card"><div class="session-heading"><h2>${esc(s.title)}</h2><span>${esc(s.time)}${s.time.includes("onwards") ? "" : " h"}</span></div>${chairs}${entries}</article>`;
     }).join('');
     for (let i=0; i<2; i++) {
       const tab = $('tab-day-' + i);

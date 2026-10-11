@@ -147,3 +147,11 @@ body.install-guide-open{overflow:hidden}
 .certificate-privacy p{font-size:10.5px;line-height:1.5;color:var(--muted);margin:5px 0 0}
 .certificate-shortcut{background:linear-gradient(135deg,#fffaf0,#f4e5c9)}
 @media(min-width:700px){.certificate-form{grid-template-columns:1fr auto;align-items:end}.certificate-form label{grid-column:1/-1}.certificate-form .button{min-width:190px}.certificate-form input{min-width:360px}}
+
+/* v7: organiser-only certificate dry run */
+.certificate-test-panel{border:1px dashed #ad925b;background:#fffaee;padding:14px;margin:15px 0}
+.certificate-test-panel strong{font-size:12px;color:#7e1430}
+.certificate-test-panel label{display:block;font-size:12px;color:#192a3b;margin:8px 0 4px;font-weight:750}
+.certificate-test-panel input[type="checkbox"]{margin-right:5px}
+.certificate-test-panel input[type="password"],.certificate-test-panel select{display:block;width:100%;min-height:42px;border-radius:9px;border:1px solid #c4aa7d;background:white;padding:8px}
+.certificate-test-panel p{font-size:11px;line-height:1.5}
