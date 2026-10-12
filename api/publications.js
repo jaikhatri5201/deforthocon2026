@@ -15,7 +15,12 @@ module.exports=function handler(req,res){
   res.setHeader('X-Content-Type-Options','nosniff');
   if(req.method!=='GET'){res.setHeader('Allow','GET');return res.status(405).json({ok:false,message:'Method not allowed.'});}
   const doc=typeof req.query?.doc==='string'?req.query.doc.trim():'';
-  if(!doc)return res.status(200).json({released:Date.now()>=RELEASE_MS,releaseAt:RELEASE_AT});
+  if(!doc){
+    const configured=/^[0-9a-f]{64}$/i.test(process.env.PUBLICATIONS_AES256_KEY||'');
+    const filesPresent=Object.values(DOCUMENTS).every(item=>fs.existsSync(path.join(process.cwd(),'private','publications',item.file)));
+    const ready=configured&&filesPresent;
+    return res.status(200).json({released:ready&&Date.now()>=RELEASE_MS,ready,releaseAt:RELEASE_AT});
+  }
   const item=Object.prototype.hasOwnProperty.call(DOCUMENTS,doc)?DOCUMENTS[doc]:null;
   if(!item)return res.status(404).json({ok:false,message:'Document not found.'});
   if(Date.now()<RELEASE_MS)return res.status(423).json({ok:false,message:'Available on 16 October 2026 at 09:30 hrs IST.'});
