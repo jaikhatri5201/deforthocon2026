@@ -155,3 +155,20 @@ body.install-guide-open{overflow:hidden}
 .certificate-test-panel input[type="checkbox"]{margin-right:5px}
 .certificate-test-panel input[type="password"],.certificate-test-panel select{display:block;width:100%;min-height:42px;border-radius:9px;border:1px solid #c4aa7d;background:white;padding:8px}
 .certificate-test-panel p{font-size:11px;line-height:1.5}
+
+/* Conference publications: restrained styling matching the existing Info page. */
+.publication-tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:16px;border:1px solid #ddc9aa;border-radius:12px;overflow:hidden}
+.publication-tab{background:#fff8ec;border:0;color:var(--maroon);font-size:14px;font-weight:800;padding:12px 8px}
+.publication-tab+.publication-tab{border-left:1px solid #ddc9aa}
+.publication-tab.active{background:var(--maroon);color:#fff}
+.publication-tab:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.publication-panel{padding-top:8px}.publication-panel[hidden]{display:none}
+.publication-item{padding:15px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.publication-item>div{flex:1 1 210px;min-width:0}
+.publication-item strong{display:block;color:var(--navy);font-size:15px;line-height:1.35}
+.publication-item small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}
+.publication-item>.button{flex:1 1 190px;max-width:320px}
+.publication-download[aria-disabled="true"]{opacity:.72;cursor:default;pointer-events:none}
+.publication-section-desc{margin:9px 0 2px}
+.publication-status{font-weight:750;color:var(--maroon);margin:12px 0 3px}
+@media(max-width:560px){.publication-item>.button{flex-basis:100%;max-width:none}}
