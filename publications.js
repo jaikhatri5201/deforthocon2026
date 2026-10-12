@@ -34,7 +34,7 @@
           a.textContent=releaseLabel;
         }
       });
-      statusEl.textContent=ready?'Released · Downloads now available':'Scheduled release: Friday, 16 October 2026 at 09:30 hrs IST';
+      statusEl.textContent=ready?'Released · Downloads now available':info.ready===false?'Publications being prepared; downloads will be enabled after verification.':'Scheduled release: Friday, 16 October 2026 at 09:30 hrs IST';
       lastStatus=ready;
     }catch{
       if(lastStatus===true)return; // A previously verified release still requires server authorisation at download.
