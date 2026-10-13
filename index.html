@@ -98,6 +98,34 @@
         <div class="card"><p class="eyebrow maroon">VENUE</p><h2>Chaitanya Auditorium</h2><p>Military Hospital Khadki, Pune</p><a class="button button-maroon full-width" id="maps-link" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div>
         <div class="card registration" id="registration"><p class="eyebrow maroon">REGISTRATION</p><h2>Register for the CME</h2><p>Scan this QR code or open the original registration form linked in the brochure.</p><img class="qr-image" src="assets/registration-qr.png" width="180" height="180" alt="QR code for the DefOrthoCon registration form"><a class="button button-gold full-width" id="registration-link" target="_blank" rel="noopener noreferrer">Open registration form ↗</a><p class="footnote">The form and payment process are hosted externally. Check its terms and payment details before submitting.</p></div>
         <div class="card"><p class="eyebrow maroon">DOCUMENTS</p><h2>Latest programme</h2><p>Read the revised programme without leaving the app. Use the visible Back button to return here.</p><a class="button button-outline-dark full-width" href="#brochure" data-open-brochure>View latest programme →</a></div>
+        <div class="card publication-card" id="digital-publications">
+          <p class="eyebrow maroon">INAUGURAL RELEASE · 16 OCTOBER 2026</p>
+          <h2>Digital Publications</h2>
+          <p>The DEFORTHOCON 2026 scientific abstracts and patient education materials will be available here from <strong>09:30 hrs IST on 16 October 2026</strong>.</p>
+          <div class="publication-tabs" role="tablist" aria-label="Choose digital publication">
+            <button type="button" class="publication-tab active" id="publication-tab-souvenir" data-publication-tab="souvenir" role="tab" aria-selected="true" aria-controls="publication-panel-souvenir">e-Souvenir</button>
+            <button type="button" class="publication-tab" id="publication-tab-booklet" data-publication-tab="booklet" role="tab" aria-selected="false" aria-controls="publication-panel-booklet">e-Booklet</button>
+          </div>
+          <div id="publication-panel-souvenir" class="publication-panel" role="tabpanel" aria-labelledby="publication-tab-souvenir">
+            <div class="publication-item">
+              <div><strong>Conference Abstracts</strong><small>82 pages · 16 scientific reviews · Hip, Knee and Shoulder</small></div>
+              <a class="button button-outline-dark publication-download" data-publication-doc="abstracts" role="link" aria-disabled="true" tabindex="-1">Available 16 Oct, 09:30 IST</a>
+            </div>
+          </div>
+          <div id="publication-panel-booklet" class="publication-panel" role="tabpanel" aria-labelledby="publication-tab-booklet" hidden>
+            <p class="publication-section-desc">Arthroplasty Patient Information &amp; Self-Care Package · 31 pages per edition</p>
+            <div class="publication-item">
+              <div><strong>English Edition</strong><small>Hip, Knee and Shoulder Replacement · Patient guidance</small></div>
+              <a class="button button-outline-dark publication-download" data-publication-doc="english" role="link" aria-disabled="true" tabindex="-1">Available 16 Oct, 09:30 IST</a>
+            </div>
+            <div class="publication-item">
+              <div><strong>हिन्दी संस्करण</strong><small>आर्थ्रोप्लास्टी रोगी जानकारी · 31 पृष्ठ</small></div>
+              <a class="button button-outline-dark publication-download" data-publication-doc="hindi" role="link" aria-disabled="true" tabindex="-1">Available 16 Oct, 09:30 IST</a>
+            </div>
+          </div>
+          <p id="publication-status" class="publication-status" role="status" aria-live="polite">Checking release status…</p>
+          <p class="footnote">Files are released together at 09:30 hrs IST. For problems downloading, please contact the organising team.</p>
+        </div>
         <div class="card certificate-shortcut"><p class="eyebrow maroon">AFTER THE CONFERENCE</p><h2>Faculty &amp; Delegate Certificates</h2><p>Use the email ID or mobile number in the conference register. Certificates are released after attendance verification.</p><a class="button button-maroon full-width" href="#certificate" data-screen-link="certificate">Find my certificate →</a></div>
         <div class="card"><p class="eyebrow maroon">MMC ACCREDITATION</p><h2>04 CPD credit points approved for delegates</h2><p>MMC CPD Code: <strong>MMC/MAC/2026/D-025865</strong></p><p>Approved on 09 October 2026. Faculty/speaker credit is regulated separately by MMC (one point per lecture under the approval letter). Attendance verification and MMC reporting are mandatory.</p></div>
         <h2 class="section-title">Organising committee</h2><div id="committee-list" class="committee-grid"></div>
@@ -203,5 +231,6 @@
   </div>
   <script src="certificate.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="publications.js" defer></script>
 </body>
 </html>
