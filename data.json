@@ -7,8 +7,8 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Chaitanya+Auditorium+Military+Hospital+Khadki+Pune",
   "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfJPyopwxFpvQ00Wq_r0_UbZmZE1pOa4qC04E4SJSR-jJFpZw/viewform?usp=publish-editor",
   "registrationNote": "Registration form and payment are hosted externally. Please verify the details on the form before submitting.",
-  "brochure": "assets/DEFORTHOCON_2026_Brochure_2.pdf",
-  "sourceNote": "Scientific programme from the revised DEFORTHOCON 2026 brochure, updated to show MMC approval on 11 October 2026. Programme changes remain subject to organiser confirmation.",
+  "brochure": "assets/DEFORTHOCON_2026_Brochure_3.pdf",
+  "sourceNote": "Scientific programme transcribed from DEFORTHOCON 2026 Brochure 3 (13 October 2026).",
   "creditHours": 4,
   "certificate": {
     "releaseAt": "2026-10-17T17:00:00+05:30",
@@ -148,15 +148,14 @@
               "kind": "logistics"
             },
             {
-              "time": "09:07–09:12",
-              "title": "Welcome Address",
-              "speakers": [
-                "Brig Vishal Sondhi"
-              ]
+              "time": "09:07–09:10",
+              "title": "Release of e-Souvenir and e-Booklet",
+              "speakers": [],
+              "kind": "logistics"
             },
             {
-              "time": "09:12–09:15",
-              "title": "Release of e-Souvenir and e-Booklet",
+              "time": "09:10–09:15",
+              "title": "Felicitation of Teachers",
               "speakers": [],
               "kind": "logistics"
             },
