@@ -46,6 +46,12 @@
       ]
     },
     {
+      "role": "Deputy Organising Chairperson",
+      "names": [
+        "Col Manpreet Singh"
+      ]
+    },
+    {
       "role": "Convenor",
       "names": [
         "Col R S Parmar"
@@ -62,7 +68,6 @@
       "names": [
         "Surg Cdr Sunit Wani",
         "Lt Col Vivek Mathew Philip",
-        "Lt Col Akshay Sharma",
         "Sqn Ldr R Anand"
       ]
     },
@@ -87,6 +92,8 @@
     {
       "role": "Joint Organising Secretaries",
       "names": [
+        "Lt Col J P Khatri",
+        "Lt Col Akshay Sharma",
         "Surg Cdr Sanjay Puri",
         "Surg Lt Cdr A Nagarajan"
       ]
@@ -669,6 +676,11 @@
     }
   ],
   "announcements": [
+    {
+      "date": "13 October 2026",
+      "heading": "Brochure 3: Latest scientific programme",
+      "message": "The approved four-page Brochure 3 supersedes the previous programme. Inauguration on 16 October includes e-Souvenir/e-Booklet ceremonial release at 09:07–09:10 h and Felicitation of Teachers at 09:10–09:15 h. Digital PDF downloads remain protected until 09:30 h IST."
+    },
     {
       "date": "11 October 2026",
       "heading": "MMC approval now on conference brochure",
