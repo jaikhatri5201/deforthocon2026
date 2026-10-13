@@ -6,7 +6,7 @@ on:
       - feature/brochure3-feedback-webex-oct2026
       - main
     paths:
-      - assets/DEFORTHOCON_2026_Brochure_3.pdf
+      - assets/DEFORTHOCON_2026_Brochure 3.pdf
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
           from pathlib import Path
           import fitz
           from PIL import Image
-          source=Path('assets/DEFORTHOCON_2026_Brochure_3.pdf')
+          source=Path('assets/DEFORTHOCON_2026_Brochure 3.pdf')
           if not source.is_file():
               raise SystemExit('The approved Brochure 3 PDF must be uploaded first.')
           doc=fitz.open(source)
