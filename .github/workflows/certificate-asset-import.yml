@@ -1,0 +1,38 @@
+name: Import approved certificate backgrounds
+on:
+  push:
+    branches:
+      - fix/certificate-locked-master-oct2026
+    paths:
+      - assets/DEFORTHOCON_2026_Approved_Certificate_Backgrounds.zip
+permissions:
+  contents: write
+jobs:
+  import-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract and verify exactly two approved PNG assets
+        run: |
+          unzip -o -j 'assets/DEFORTHOCON_2026_Approved_Certificate_Backgrounds.zip' -d assets/
+          python - <<'PY'
+          from pathlib import Path
+          import struct
+          for kind in ('Delegate','Faculty'):
+              p=Path(f'assets/DEFORTHOCON_2026_{kind}_Certificate_BG_FINAL.png')
+              content=p.read_bytes()
+              assert content[:8]==b'\x89PNG\r\n\x1a\n' and len(content)>100000
+              width,height=struct.unpack('>II',content[16:24])
+              assert (width,height)==(2525,1787),(kind,width,height)
+              print(kind,'validated',width,height,len(content))
+          PY
+      - name: Commit certificate artwork and remove upload zip
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm -f assets/DEFORTHOCON_2026_Approved_Certificate_Backgrounds.zip
+          git add assets/DEFORTHOCON_2026_Delegate_Certificate_BG_FINAL.png assets/DEFORTHOCON_2026_Faculty_Certificate_BG_FINAL.png
+          git commit -m "Install approved final Delegate and Faculty certificate backgrounds"
+          git push
