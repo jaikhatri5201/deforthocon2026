@@ -48,7 +48,7 @@ jobs:
           PY
       - name: Verify application files
         run: |
-          for f in app.js publications.js feedback.js certificate.js api/feedback.js api/publications.js; do node --check "$f"; done
+          for f in app.js publications.js certificate.js api/publications.js; do node --check "$f"; done
           node -e "let d=require('./data.json');let a=d.days.flatMap(x=>x.sessions).filter(s=>/^(Session\s+\d+|Special Session)\b/.test(s.title));if(a.length!==10)throw Error('Expected 10 academic sessions');"
       - name: Commit updated brochure previews
         run: |
