@@ -95,28 +95,6 @@
       <section id="screen-updates" class="screen" aria-labelledby="updates-heading"><div class="page-intro"><p class="eyebrow maroon">CONFERENCE DESK</p><h1 id="updates-heading">Announcements</h1><p>Schedule revisions and official conference notices.</p></div><div class="content"><button class="button button-maroon full-width" id="check-updates" type="button">Check for latest version ↻</button><p id="update-status" class="footnote" role="status" aria-live="polite"></p><div id="announcements-list"></div><p class="footnote">Updates become available when the organiser republishes the site. Push notifications and live messaging are not enabled in this first version.</p></div></section>
 
 
-      <section id="screen-feedback" class="screen" aria-labelledby="feedback-heading">
-        <div class="page-intro"><p class="eyebrow maroon">SCIENTIFIC PROGRAMME</p><h1 id="feedback-heading">Session Feedback</h1>
-          <p>Anonymous evaluation of the DEFORTHOCON scientific sessions.</p></div>
-        <div class="content feedback-content">
-          <div class="card feedback-card">
-            <p>Rate the academic sessions you attended: <strong>1 = Poor</strong>, <strong>5 = Excellent</strong>. You may skip sessions or mark them Not attended.</p>
-            <p class="footnote">No name, email ID, telephone number or login is requested.</p>
-            <div class="feedback-days" role="tablist" aria-label="Feedback day">
-              <button type="button" class="feedback-day active" data-feedback-day="0" role="tab" aria-selected="true">16 Oct · Day 1</button>
-              <button type="button" class="feedback-day" data-feedback-day="1" role="tab" aria-selected="false">17 Oct · Day 2</button>
-            </div>
-            <form id="session-feedback-form" novalidate>
-              <div id="feedback-sessions" aria-live="polite"></div>
-              <div class="feedback-actions">
-                <button type="submit" class="button button-maroon full-width" id="feedback-submit" disabled>Submit anonymous feedback</button>
-                <p id="feedback-status" role="status" aria-live="polite" class="footnote">Checking feedback availability…</p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
       <section id="screen-info" class="screen" aria-labelledby="info-heading"><div class="page-intro"><p class="eyebrow maroon">PLAN YOUR VISIT</p><h1 id="info-heading">Conference information</h1></div><div class="content">
         <div class="card"><p class="eyebrow maroon">VENUE</p><h2>Chaitanya Auditorium</h2><p>Military Hospital Khadki, Pune</p><a class="button button-maroon full-width" id="maps-link" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div>
         <div class="card" id="webex-access" aria-labelledby="webex-heading">
@@ -241,7 +219,6 @@
       <button data-screen-target="programme" class="nav-item" type="button"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h3M14 14h3"/></svg><span>Programme</span></button>
       <button data-screen-target="faculty" class="nav-item" type="button"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></svg><span>Faculty</span></button>
       <button data-screen-target="updates" class="nav-item" type="button"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h3l9 5V5l-9 5H3ZM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg><span>Updates</span></button>
-      <button data-screen-target="feedback" class="nav-item" type="button"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5ZM8 9h8M8 12h6"/></svg><span>Feedback</span></button>
       <button data-screen-target="info" class="nav-item" type="button"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Info</span></button>
     </nav>
   </div>
@@ -262,6 +239,5 @@
   <script src="certificate.js" defer></script>
   <script src="app.js" defer></script>
   <script src="publications.js" defer></script>
-  <script src="feedback.js" defer></script>
 </body>
 </html>
