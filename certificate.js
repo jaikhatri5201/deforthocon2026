@@ -29,6 +29,7 @@ async function lookup(e){
    cert=result.certificate;
    $('certificate-person-name').textContent=cert.name;
    $('certificate-person-category').textContent=cert.category==='faculty'?'Faculty':'Delegate';
+   $('certificate-person-cpd').textContent=cert.category==='faculty'?'01 CPD point per eligible faculty lecture':'04 CPD points for eligible delegates';
    $('certificate-person-number').textContent=cert.certificateNo;
    $('certificate-result').hidden=false;
    message(cert.testOnly?'TEST ONLY: download a watermarked sample PDF to check the complete workflow.':'Certificate ready. Verify your name before downloading.','success');
@@ -68,7 +69,9 @@ async function download(){
  if(!cert)return;
  const btn=$('certificate-download');btn.disabled=true;btn.textContent='Preparing PDF…';
  try{
-  const bg=await loadImage('assets/certificate-template.png');
+  const categoryImage=cert.category==='faculty'?'Faculty':cert.category==='delegate'?'Delegate':null;
+  if(!categoryImage)throw new Error('Certificate category is not valid.');
+  const bg=await loadImage(`assets/DEFORTHOCON_2026_${categoryImage}_Certificate_BG_FINAL.png`).catch(()=>{throw new Error('Approved certificate artwork is not installed. Please contact the organiser.');});
   const c=document.createElement('canvas');c.width=bg.naturalWidth;c.height=bg.naturalHeight;
   const ctx=c.getContext('2d',{alpha:false});ctx.drawImage(bg,0,0,c.width,c.height);
   const w=c.width,h=c.height;
@@ -76,11 +79,9 @@ async function download(){
   const nameSize=30*w/841.89;
   if(document.fonts?.load){try{await document.fonts.load(`italic ${nameSize}px ${attendeeNameFont}`,cert.name);}catch{}}
   drawFittedText(ctx,cert.name,{x:w*.495,y:h*.548,pt:nameSize,minPt:w*.021,width:w*.47,
-     color:'#840c26',font:attendeeNameFont,weight:'italic'});
-  drawFittedText(ctx,`as ${cert.category} to the academic success of the conference.`,{
-     x:w*.52,y:h*.776,pt:w*.017,minPt:w*.013,width:w*.67,color:'#1d3054',font:'Georgia, "Times New Roman", serif',weight:'italic'});
+     color:'#860020',font:attendeeNameFont,weight:'italic'});
   ctx.fillStyle='#3f3a34';ctx.textAlign='left';ctx.textBaseline='middle';
-  ctx.font=`${w*.017}px Georgia, serif`;ctx.fillText(cert.certificateNo,w*.19,h*.962);
+  ctx.font=`${w*.017}px Georgia, serif`;ctx.fillText(cert.certificateNo,w*.19,h*.956);
   if(cert.testOnly){
     ctx.save();ctx.translate(w/2,h/2);ctx.rotate(-0.25);
     ctx.fillStyle='rgba(170,23,45,0.27)';ctx.textAlign='center';ctx.font=`bold ${w*.095}px Arial, sans-serif`;
