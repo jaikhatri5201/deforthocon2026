@@ -14,7 +14,11 @@ const testSelected=()=>isTestPage&&$('certificate-test-toggle')?.checked;
 async function lookup(e){
  e?.preventDefault?.();cert=null;$('certificate-result').hidden=true;
  const test=testSelected();
- const identifier=test?('test-'+$('certificate-test-category').value+'@deforthocon.test'):$('certificate-identifier').value.trim();
+ const selectedCategory=test?$('certificate-test-category').value:null;
+ if(test&&!['faculty','delegate'].includes(selectedCategory)){
+   return message('Choose Faculty or Delegate in the test panel before finding a certificate.','error');
+ }
+ const identifier=test?('test-'+selectedCategory+'@deforthocon.test'):$('certificate-identifier').value.trim();
  if(!identifier)return message('Enter the registered email ID or mobile number.','error');
  const key=test?$('certificate-test-key').value:'';
  if(test && !key)return message('Enter the private organiser test key.','error');
@@ -26,6 +30,9 @@ async function lookup(e){
    const result=await response.json().catch(()=>({}));
    if(!response.ok||!result.ok)return message(result.message||'Certificate service unavailable.','error');
    if(result.status!=='ready')return message(result.message||'Certificate not available.',result.status==='not_released'?'info':'pending');
+   if(test&&(result.certificate?.category!==selectedCategory||result.certificate?.testOnly!==true)){
+     return message('Certificate category mismatch. Please select the type and try again.','error');
+   }
    cert=result.certificate;
    $('certificate-person-name').textContent=cert.name;
    $('certificate-person-category').textContent=cert.category==='faculty'?'Faculty':'Delegate';
@@ -104,7 +111,14 @@ function setup(){
    $('certificate-test-toggle').addEventListener('change',()=>{
       const enabled=testSelected();$('certificate-test-controls').hidden=!enabled;
       $('certificate-identifier').disabled=enabled;$('certificate-identifier').required=!enabled;
-      $('certificate-result').hidden=true;cert=null;message('');
+      $('certificate-test-category').value='';
+      $('certificate-result').hidden=true;cert=null;
+      message(enabled?'Select Faculty or Delegate, then click Find my certificate.':'','info');
+   });
+   $('certificate-test-category').addEventListener('change',()=>{
+      cert=null;$('certificate-result').hidden=true;
+      const category=$('certificate-test-category').value;
+      message(category?category.charAt(0).toUpperCase()+category.slice(1)+' selected. Click Find my certificate again before downloading.':'Choose a certificate type.','info');
    });
  }
 }
