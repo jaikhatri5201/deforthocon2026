@@ -60,7 +60,7 @@
     $('contact-list').innerHTML = d.contact.map(c => `<div class="contact-item"><span><strong>${esc(c.name)}</strong><small>${esc(c.role)}</small></span><a href="tel:${esc(c.tel.replace(/[^\d+]/g,''))}" aria-label="Call ${esc(c.name)}">Call ${esc(c.tel)}</a></div>`).join('');
   };
   const render = () => {renderProgramme();renderFaculty();renderUpdates();renderInfo();};
-  const SCREENS = ['home','programme','faculty','updates','feedback','info','certificate','brochure'];
+  const SCREENS = ['home','programme','faculty','updates','info','certificate','brochure'];
   const showScreen = (screen, focus = false) => {
     if (!SCREENS.includes(screen)) screen='home';
     for (const name of SCREENS) $('screen-'+name).classList.toggle('active',name === screen);
