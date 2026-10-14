@@ -1,0 +1,61 @@
+name: Refresh final brochure previews
+
+on:
+  push:
+    branches:
+      - feature/brochure3-feedback-webex-oct2026
+      - main
+    paths:
+      - assets/DEFORTHOCON_2026_Brochure 3.pdf
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-brochure-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PDF renderer
+        run: python -m pip install --quiet "PyMuPDF>=1.24,<2" "Pillow>=10,<13"
+      - name: Render exactly four brochure pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import fitz
+          from PIL import Image
+          source=Path('assets/DEFORTHOCON_2026_Brochure 3.pdf')
+          if not source.is_file():
+              raise SystemExit('The approved Brochure 3 PDF must be uploaded first.')
+          doc=fitz.open(source)
+          assert len(doc)==4, f'Expected four pages, found {len(doc)}'
+          out=Path('assets/brochure-pages')
+          out.mkdir(parents=True,exist_ok=True)
+          for i,page in enumerate(doc,1):
+              pix=page.get_pixmap(matrix=fitz.Matrix(2.22,2.22),alpha=False)
+              image=Image.frombytes('RGB',(pix.width,pix.height),pix.samples)
+              name=out/f'page-{i}.webp'
+              image.save(name,format='WEBP',quality=84,method=6)
+              print(name,pix.width,pix.height)
+          PY
+      - name: Verify application files
+        run: |
+          for f in app.js publications.js certificate.js api/publications.js; do node --check "$f"; done
+          node -e "let d=require('./data.json');let a=d.days.flatMap(x=>x.sessions).filter(s=>/^(Session\s+\d+|Special Session)\b/.test(s.title));if(a.length!==10)throw Error('Expected 10 academic sessions');"
+      - name: Commit updated brochure previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/brochure-pages/page-1.webp assets/brochure-pages/page-2.webp assets/brochure-pages/page-3.webp assets/brochure-pages/page-4.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Render Brochure 3 pages for in-app reader"
+            git push
+          fi
