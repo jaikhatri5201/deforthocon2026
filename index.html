@@ -164,8 +164,8 @@
                 <label for="certificate-test-key">Private test key</label>
                 <input type="password" id="certificate-test-key" autocomplete="off" placeholder="Vercel CERTIFICATE_TEST_KEY">
                 <label for="certificate-test-category">Test a</label>
-                <select id="certificate-test-category"><option value="delegate">Delegate</option><option value="faculty">Faculty</option></select>
-                <p>With test mode enabled, click <strong>Find my certificate</strong> above and then <strong>Download certificate PDF</strong>.</p>
+                <select id="certificate-test-category" aria-describedby="certificate-test-type-help"><option value="" selected disabled>Choose certificate type</option><option value="faculty">Faculty</option><option value="delegate">Delegate</option></select>
+                <p id="certificate-test-type-help">Choose the certificate type, click <strong>Find my certificate</strong>, and only then click <strong>Download certificate PDF</strong>. Switching the type clears the previous sample.</p>
               </div>
             </div>
             <div id="certificate-message" class="certificate-message info" role="status" aria-live="polite" hidden></div>
