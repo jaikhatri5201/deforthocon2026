@@ -1,0 +1,71 @@
+name: Restore approved Brochure 4 and render in-app preview
+
+on:
+  push:
+    branches:
+      - brochure4-schedule-and-pdf-20261015
+    paths:
+      - '_staging/brochure4/part-*.txt'
+      - '.github/workflows/brochure4-refresh.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore-brochure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet "PyMuPDF>=1.24,<2" "Pillow>=10,<13"
+      - name: Verify PDF checksum and render all four pages
+        run: |
+          python - <<'PY'
+          import base64,hashlib,shutil
+          from pathlib import Path
+          import fitz
+          from PIL import Image
+          folder=Path('_staging/brochure4')
+          parts=sorted(folder.glob('part-*.txt'))
+          assert len(parts)==33, f'Expected 33 approved segments, found {len(parts)}'
+          data=base64.b64decode(''.join(p.read_text(encoding='ascii').strip() for p in parts),validate=True)
+          assert len(data)==399630, f'Unexpected size: {len(data)}'
+          assert hashlib.sha256(data).hexdigest()=='09b7b85dda9d1f92c3fc3e756978379d30a221224d5658f753853553f98e30ad','Checksum mismatch'
+          pdf=Path('assets/DEFORTHOCON_2026_Brochure_4.pdf')
+          pdf.write_bytes(data)
+          doc=fitz.open(pdf)
+          assert len(doc)==4, f'Expected 4 pages, found {len(doc)}'
+          txt=doc[2].get_text()
+          assert 'Managing the Defects' in txt and '1700-1720h' in txt,'Day One text verification failed'
+          assert 'Management of Difficult Primary Knees' not in txt,'Obsolete lecture still present'
+          out=Path('assets/brochure-pages');out.mkdir(parents=True,exist_ok=True)
+          for i,page in enumerate(doc,1):
+              pix=page.get_pixmap(matrix=fitz.Matrix(2.22,2.22),alpha=False)
+              img=Image.frombytes('RGB',(pix.width,pix.height),pix.samples)
+              img.save(out/f'page-{i}.webp',format='WEBP',quality=84,method=6)
+              print(out/f'page-{i}.webp',pix.width,pix.height)
+          doc.close()
+          shutil.rmtree(folder)
+          PY
+      - name: Verify website code and programme data
+        run: |
+          node --check app.js
+          node --check publications.js
+          node --check certificate.js
+          node -e "const d=require('./data.json');const s=d.days[0].sessions.find(x=>x.title.includes('Managing the Defects'));if(s.time!=='16:00–17:20'||s.entries.some(x=>x.title.includes('Difficult Primary Knees')))throw Error('Bad Day One revision');"
+          test -s assets/DEFORTHOCON_2026_Brochure_4.pdf
+      - name: Commit PDF, previews and remove staging
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A _staging/brochure4
+          git add assets/DEFORTHOCON_2026_Brochure_4.pdf assets/brochure-pages/page-{1,2,3,4}.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish Brochure 4 PDF and latest four page previews"
+            git push
+          fi

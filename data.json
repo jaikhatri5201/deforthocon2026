@@ -7,8 +7,8 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Chaitanya+Auditorium+Military+Hospital+Khadki+Pune",
   "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfJPyopwxFpvQ00Wq_r0_UbZmZE1pOa4qC04E4SJSR-jJFpZw/viewform?usp=publish-editor",
   "registrationNote": "Registration form and payment are hosted externally. Please verify the details on the form before submitting.",
-  "brochure": "assets/DEFORTHOCON_2026_Brochure%203.pdf",
-  "sourceNote": "Scientific programme transcribed from DEFORTHOCON 2026 Brochure 3 (13 October 2026).",
+  "brochure": "assets/DEFORTHOCON_2026_Brochure_4.pdf",
+  "sourceNote": "Scientific programme transcribed from DEFORTHOCON 2026 Brochure 4 (15 October 2026), pages 3–4.",
   "creditHours": 4,
   "certificate": {
     "releaseAt": "2026-10-17T17:00:00+05:30",
@@ -207,13 +207,13 @@
           ]
         },
         {
-          "title": "Inaugural Tea",
+          "title": "High Tea",
           "time": "10:10–10:40",
           "chairs": [],
           "entries": [
             {
               "time": "10:10–10:40",
-              "title": "Inaugural Tea",
+              "title": "High Tea",
               "speakers": [],
               "kind": "break"
             }
@@ -376,7 +376,7 @@
         },
         {
           "title": "Session 4 · Managing the Defects",
-          "time": "16:00–17:30",
+          "time": "16:00–17:20",
           "chairs": [
             "Dr Eknath Pawar",
             "Gp Capt Santosh Kumar SH"
@@ -405,13 +405,6 @@
             },
             {
               "time": "17:00–17:20",
-              "title": "Management of Difficult Primary Knees",
-              "speakers": [
-                "Maj Gen Amresh Ghai, AVSM (Retd.)"
-              ]
-            },
-            {
-              "time": "17:20–17:30",
               "title": "Q&A",
               "speakers": [],
               "kind": "discussion"
@@ -676,6 +669,11 @@
     }
   ],
   "announcements": [
+    {
+      "date": "15 October 2026",
+      "heading": "Brochure 4: Revised scientific programme",
+      "message": "The updated four-page Brochure 4 is available in the app and as a PDF. Day One Session 4 (Managing the Defects) is now 16:00–17:20 h, with Q&A at 17:00–17:20 h. The previously listed 17:00–17:20 h lecture has been removed. Day Two programme remains unchanged."
+    },
     {
       "date": "13 October 2026",
       "heading": "Brochure 3: Latest scientific programme",
