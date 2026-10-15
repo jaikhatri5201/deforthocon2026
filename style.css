@@ -172,3 +172,16 @@ body.install-guide-open{overflow:hidden}
 .publication-section-desc{margin:9px 0 2px}
 .publication-status{font-weight:750;color:var(--maroon);margin:12px 0 3px}
 @media(max-width:560px){.publication-item>.button{flex-basis:100%;max-width:none}}
+
+/* Approved Webex access card: preserve the existing conference look on mobile and desktop. */
+.webex-card .webex-join-button{margin:14px 0 16px}
+.webex-credentials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.webex-credentials>div{border:1px solid var(--line);border-radius:11px;background:var(--cream);padding:12px;min-width:0}
+.webex-credentials strong,.webex-credentials span{display:block;overflow-wrap:anywhere}
+.webex-credentials strong{color:var(--muted);font-size:11px;margin-bottom:7px}
+.webex-credentials span{color:var(--navy);font-size:15px;font-weight:750}
+.webex-advanced{margin-top:13px;border-top:1px solid var(--line);padding-top:12px}
+.webex-advanced summary{color:var(--maroon);font-weight:750;font-size:13px;cursor:pointer}
+.webex-advanced p{margin:9px 0 0}
+.webex-advanced code{overflow-wrap:anywhere;word-break:break-word;font-size:12px}
+@media(max-width:390px){.webex-credentials{grid-template-columns:1fr}}
