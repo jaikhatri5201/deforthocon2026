@@ -78,6 +78,9 @@
       showScreen('info');
       // Wait for the panel to become visible before locating it.
       requestAnimationFrame(() => $('registration').scrollIntoView({block:'start'}));
+    } else if (hash === 'webex') {
+      showScreen('info');
+      requestAnimationFrame(() => $('webex-access').scrollIntoView({block:'start'}));
     } else showScreen(SCREENS.includes(hash) ? hash : 'home');
   };
   const loadJSON = async (path) => {
