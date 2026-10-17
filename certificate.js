@@ -81,10 +81,8 @@ async function download(){
   // Replace superseded text from the previous master; do not alter the art.
   const paper='#faf7f0',maroon='#860020',navy='#1a2a54',ink='#3c3c3c';
   const shade=(x1,y1,x2,y2)=>{ctx.fillStyle=paper;ctx.fillRect(w*x1,h*y1,w*(x2-x1),h*(y2-y1));};
-  shade(.10,.440,.90,.779);
-  shade(.740,.835,.968,.941);
-  shade(.690,.938,.968,.972);
-  shade(.044,.940,.325,.972);
+  // Mask only the dynamic central content; the first signature begins below this area.
+  shade(.10,.440,.90,.783);
   const serif='Georgia, "Times New Roman", serif';
   function line(value,x,y,pt,maxWidth,options={}){
     let size=pt*w/841.89;
@@ -115,35 +113,13 @@ async function download(){
     .495,.720,12.8,.79,{bold:true,color:maroon});
   line('MMC CPD Code Number: MMC/MAC/2026/D-025865   •   NO: MMC/Accre.Cert/SPA-0334/2015 / 09 Oct 2026',
     .495,.757,11.6,.82,{color:ink});
-  // Print-fidelity repair: use the actual signature pixels ALREADY IN THE
-  // approved image master, never hand-traced/Path2D imitations.
-  // Crop boxes are mapped from the embedded signature images and geometry
-  // of the two-slide, 17 October observer-approved PPT (A4 landscape).
-  ctx.fillStyle=paper;
-  ctx.fillRect(w*.035,h*.779,w*.93,h*.192);
-  const signatureCrops=[
-    // original embedded signatures: Convenor, Chairperson, Organising Secretary
-    {sx:.0895,sy:.7860,sw:.1603,sh:.0705,dx:.0895,dy:.7860,dw:.1603,dh:.0705},
-    {sx:.3257,sy:.8060,sw:.1274,sh:.0708,dx:.3257,dy:.8060,dw:.1274,dh:.0708},
-    {sx:.5733,sy:.7830,sw:.1104,sh:.0727,dx:.5733,dy:.7830,dw:.1104,dh:.0727}
-  ];
-  for(const s of signatureCrops){
-    ctx.drawImage(bg,w*s.sx,h*s.sy,w*s.sw,h*s.sh,
-      w*s.dx,h*s.dy,w*s.dw,h*s.dh);
-  }
-  // Preserve the approved four-column signatory panel; observer has no digital signature.
-  line('Col Rup Singh Parmar',.186,.875,13.2,.235,{bold:true,color:maroon});
-  line('Convenor',.186,.907,12.8,.16,{bold:true,color:maroon});
-  line('Brig Vishal Sondhi',.404,.875,13.2,.215,{bold:true,color:maroon});
-  line('Organising Chairperson',.404,.907,12.3,.24,{bold:true,color:maroon});
-  line('Lt Col Tushar Gogia',.628,.875,13.2,.22,{bold:true,color:maroon});
-  line('Organising Secretary',.628,.907,12.3,.245,{bold:true,color:maroon});
-  line('Dr Yogesh Gaikwad',.850,.875,13.2,.205,{bold:true,color:maroon});
-  line('MMC Observer',.850,.907,12.6,.18,{bold:true,color:maroon});
-  line('Code: MMC/MAO-01266/2017',.850,.954,10.3,.255,{color:ink});
-  line('Certificate No.:',.058,.954,11.9,.122,{align:'left',color:ink});
-  line(cert.certificateNo,.180,.954,11.9,.17,{align:'left',color:ink});
-  line('Date of Issue: 17 October 2026',.500,.954,11.9,.31,{color:ink});
+  // FINAL PPT FIDELITY: The 17 Oct observer-approved background already embeds
+  // all three authentic high-resolution signature images, names, and designations.
+  // IMPORTANT: NEVER white-out, crop, redraw, reposition, or scale those signatures.
+  // Retain the lower signatory and MMC observer panel pixel-for-pixel as supplied.
+  // Only the attendee's unique certificate number is added to the blank number slot.
+  shade(.185,.935,.342,.972);
+  line(cert.certificateNo,.190,.956,11.8,.147,{align:'left',color:ink});
   if(cert.testOnly){
     ctx.save();ctx.translate(w/2,h/2);ctx.rotate(-0.25);
     ctx.fillStyle='rgba(170,23,45,0.27)';ctx.textAlign='center';ctx.font=`bold ${w*.095}px Arial, sans-serif`;
