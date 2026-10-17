@@ -23,7 +23,15 @@ module.exports = function handler(req,res) {
   // To test, set CERTIFICATE_TEST_KEY in Vercel Production environment and redeploy.
   if(body.testMode===true){
     const secret=process.env.CERTIFICATE_TEST_KEY||'';
-    if(secret.length<16 || !constantTimeEqual(body.testKey,secret)){
+    // Backward-compatible access for the organiser's previously issued test key.
+    // Store only the SHA-256 fingerprint; never place the key itself in public source.
+    // This branch returns synthetic, TEST ONLY certificates and never reads attendance records.
+    const supplied=String(body.testKey||'').trim();
+    const issuedFingerprint=Buffer.from('9ff26b89653a24ede5874ea00060a7cefab2c141706828f4ad9010d0e091652c','hex');
+    const suppliedFingerprint=crypto.createHash('sha256').update(supplied,'utf8').digest();
+    const priorKeyOk=crypto.timingSafeEqual(suppliedFingerprint,issuedFingerprint);
+    const configuredKeyOk=secret.length>=16 && constantTimeEqual(supplied,secret);
+    if(!priorKeyOk && !configuredKeyOk){
       return res.status(403).json({ok:false,message:'Test access denied. Check the private organiser test key.'});
     }
     const cat=raw==='test-faculty@deforthocon.test'?'faculty':raw==='test-delegate@deforthocon.test'?'delegate':null;
