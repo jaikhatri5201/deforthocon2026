@@ -64,7 +64,7 @@ function pdfFromJpeg(jpeg,width,height){
  append(ascii(`xref\n0 6\n0000000000 65535 f \n${offsets.slice(1).map(x=>String(x).padStart(10,'0')+' 00000 n \n').join('')}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${startxref}\n%%EOF`));
  return new Blob([bytesConcat(parts)],{type:'application/pdf'});
 }
-function jpegBytes(canvas){const b64=canvas.toDataURL('image/jpeg',0.94).split(',')[1],s=atob(b64);const a=new Uint8Array(s.length);for(let i=0;i<a.length;i++)a[i]=s.charCodeAt(i);return a;}
+function jpegBytes(canvas){const b64=canvas.toDataURL('image/jpeg',0.99).split(',')[1],s=atob(b64);const a=new Uint8Array(s.length);for(let i=0;i<a.length;i++)a[i]=s.charCodeAt(i);return a;}
 async function download(){
  if(!cert)return;
  const btn=$('certificate-download');btn.disabled=true;btn.textContent='Preparing PDF…';
