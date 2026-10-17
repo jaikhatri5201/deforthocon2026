@@ -29,7 +29,7 @@ async function lookup(e){
    cert=result.certificate;
    $('certificate-person-name').textContent=cert.name;
    $('certificate-person-category').textContent=cert.category==='faculty'?'Faculty':'Delegate';
-   $('certificate-person-cpd').textContent=cert.category==='faculty'?'01 CPD point per eligible faculty lecture':'04 CPD points for eligible delegates';
+   $('certificate-person-cpd').textContent=cert.category==='faculty'?'05 CPD points for faculty':'04 CPD points for delegates';
    $('certificate-person-number').textContent=cert.certificateNo;
    $('certificate-result').hidden=false;
    message(cert.testOnly?'TEST ONLY: download a watermarked sample PDF to check the complete workflow.':'Certificate ready. Verify your name before downloading.','success');
@@ -75,13 +75,52 @@ async function download(){
   const c=document.createElement('canvas');c.width=bg.naturalWidth;c.height=bg.naturalHeight;
   const ctx=c.getContext('2d',{alpha:false});ctx.drawImage(bg,0,0,c.width,c.height);
   const w=c.width,h=c.height;
-  // Convert the approved 30 pt name to pixels at the existing A4 PDF scale.
+  // 17 October 2026: observer-approved Faculty and Delegate master,
+  // transcribed from the two-slide approved PPTX. The existing logos, frame,
+  // authorised signatures and issue date remain on the category artwork.
+  // Replace superseded text from the previous master; do not alter the art.
+  const paper='#faf7f0',maroon='#860020',navy='#1a2a54',ink='#3c3c3c';
+  const shade=(x1,y1,x2,y2)=>{ctx.fillStyle=paper;ctx.fillRect(w*x1,h*y1,w*(x2-x1),h*(y2-y1));};
+  shade(.10,.440,.90,.779);
+  shade(.740,.835,.968,.941);
+  shade(.690,.938,.968,.972);
+  shade(.044,.940,.325,.972);
+  const serif='Georgia, "Times New Roman", serif';
+  function line(value,x,y,pt,maxWidth,options={}){
+    let size=pt*w/841.89;
+    const style=(options.italic?'italic ':'')+(options.bold?'bold ':'');
+    ctx.textAlign=options.align||'center';ctx.textBaseline='middle';
+    ctx.fillStyle=options.color||navy;
+    while(size>=w*.011){
+      ctx.font=style+size+'px '+(options.font||serif);
+      if(ctx.measureText(value).width<=w*maxWidth)break;
+      size-=1;
+    }
+    ctx.fillText(value,w*x,h*y);
+  }
+  line('This is to certify that,',.495,.472,20,.52,{italic:true});
   const nameSize=30*w/841.89;
-  if(document.fonts?.load){try{await document.fonts.load(`italic ${nameSize}px ${attendeeNameFont}`,cert.name);}catch{}}
-  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.548,pt:nameSize,minPt:w*.021,width:w*.47,
-     color:'#860020',font:attendeeNameFont,weight:'italic'});
-  ctx.fillStyle='#3f3a34';ctx.textAlign='left';ctx.textBaseline='middle';
-  ctx.font=`${w*.017}px Georgia, serif`;ctx.fillText(cert.certificateNo,w*.19,h*.956);
+  if(document.fonts?.load){try{await document.fonts.load('italic '+nameSize+'px '+attendeeNameFont,cert.name);}catch{}}
+  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.527,pt:nameSize,minPt:w*.021,width:w*.47,
+    color:maroon,font:attendeeNameFont,weight:'italic'});
+  ctx.beginPath();ctx.moveTo(w*.295,h*.564);ctx.lineTo(w*.705,h*.564);
+  ctx.strokeStyle='#c59547';ctx.lineWidth=Math.max(1,w*.0011);ctx.stroke();
+  line('has attended DEFORTHOCON 2026',.495,.595,19,.65,{bold:true,color:maroon});
+  line('held at Military Hospital Khadki, Pune on 16 – 17 October 2026.',.495,.642,16,.79);
+  const isFaculty=cert.category==='faculty';
+  line('Your participation as '+(isFaculty?'faculty':'a delegate')+' is acknowledged and appreciated.',
+    .495,.683,16,.79,{italic:true});
+  line('Maharashtra Medical Council has approved '+(isFaculty?'05':'04')+
+    ' CPD credit points for '+(isFaculty?'faculty.':'delegates.'),
+    .495,.720,12.8,.79,{bold:true,color:maroon});
+  line('MMC CPD Code Number: MMC/MAC/2026/D-025865   •   NO: MMC/Accre.Cert/SPA-0334/2015 / 09 Oct 2026',
+    .495,.757,11.6,.82,{color:ink});
+  // The MMC letter prohibits a digital signature from the observer.
+  line('Dr Yogesh Gaikwad',.855,.875,14,.22,{bold:true,color:maroon});
+  line('MMC Observer',.855,.907,13,.22,{bold:true,color:maroon});
+  line('Code: MMC/MAO-01266/2017',.855,.951,11,.245,{color:ink});
+  line('Certificate No.:',.060,.956,12.3,.12,{align:'left',color:ink});
+  line(cert.certificateNo,.182,.956,12.3,.16,{align:'left',color:ink});
   if(cert.testOnly){
     ctx.save();ctx.translate(w/2,h/2);ctx.rotate(-0.25);
     ctx.fillStyle='rgba(170,23,45,0.27)';ctx.textAlign='center';ctx.font=`bold ${w*.095}px Arial, sans-serif`;
