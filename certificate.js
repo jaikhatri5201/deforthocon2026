@@ -71,7 +71,7 @@ async function download(){
  try{
   const categoryImage=cert.category==='faculty'?'Faculty':cert.category==='delegate'?'Delegate':null;
   if(!categoryImage)throw new Error('Certificate category is not valid.');
-  const bg=await loadImage(`assets/DEFORTHOCON_2026_${categoryImage}_Certificate_Approved_17Oct2026.png`).catch(()=>{throw new Error('Approved certificate artwork is not installed. Please contact the organiser.');});
+  const bg=await loadImage(`assets/DEFORTHOCON_2026_${categoryImage}_Certificate_FINAL_17Oct2026_v2.png`).catch(()=>{throw new Error('Approved certificate artwork is not installed. Please contact the organiser.');});
   const c=document.createElement('canvas');c.width=bg.naturalWidth;c.height=bg.naturalHeight;
   const ctx=c.getContext('2d',{alpha:false});ctx.drawImage(bg,0,0,c.width,c.height);
   const w=c.width,h=c.height;
