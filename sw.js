@@ -1,5 +1,5 @@
 // v8: network-first updates, offline-friendly static app shell (API calls bypass the cache).
-const CACHE='deforthocon-v13-observer-approved-certificates';
+const CACHE='deforthocon-v14-signatories-restored';
 const APP_SHELL=['./','./index.html','./style.css','./app.js','./publications.js','./certificate.js','./manifest.webmanifest','./data.json','./faculty_profiles.json',
  './assets/icon-192.png','./assets/icon-512.png','./assets/icon-maskable.png','./assets/apple-touch-icon.png','./assets/registration-qr.png',
  './assets/DEFORTHOCON_2026_Delegate_Certificate_BG_FINAL.png','./assets/DEFORTHOCON_2026_Faculty_Certificate_BG_FINAL.png',
