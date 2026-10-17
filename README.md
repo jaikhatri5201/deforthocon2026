@@ -10,7 +10,7 @@ Permanent website: https://deforthocon2026.vercel.app/
 - Chief Guest: **Surg VAdm Manish Honwad, VSM**. Removed outdated DGAFMS/Chief Patron listing.
 - Updated speakers, chairs, programme timings and searchable faculty listings.
 - MMC-approved **04 CPD credit points for delegates**, code **MMC/MAC/2026/D-025865** (MMC approval letter dated 09 October 2026). The accreditation also appears on brochure page 2 and in the app home, Programme and Conference information sections.
-- New final certificate art prepared from the committee's 10 Oct editable certificate with the three official signatures, CPD and observer codes.
+- The **17 October 2026 observer-approved Faculty and Delegate certificates** are now the sole active certificate designs. Their two approved background assets are named `*_Certificate_Approved_17Oct2026.png`; previous `*_BG_FINAL.png` names and the obsolete single-template image are retired. The live PDF generator keeps the approved artwork/signatures and inserts the verified attendee name and unique certificate number.
 - New certificate PDF generator writes an A4 PDF **without external PDF-library dependencies**.
 - Private test mode for organisers lets the committee test real API lookup + PDF downloads using **synthetic records only**, before release.
 
@@ -39,7 +39,7 @@ Redeploy after adding or changing environment variables. Vercel's Environment Va
 
 - Verify and upload master register; check uniqueness of emails/mobiles and certificate numbers.
 - Ensure all eligible records have `eligible: true`, only after verifying attendance.
-- Confirm faculty points in accordance with the MMC approval letter (one per lecture); the approved certificate artwork still shows `MMC Credit Hours: 04` as supplied.
+- Keep the observer-approved certificate's printed wording as provided: **05 CPD credit points for Faculty** and **04 CPD credit points for Delegates**. Verify individual faculty credit eligibility against the MMC approval conditions before reporting credits to MMC.
 - Confirm release date/time in Production env; redeploy any changed variables.
 - Test one known eligible delegate and faculty AFTER release and ensure both downloaded PDFs show correct name/category/number.
 - Helpdesk: contact the organising team if a record is missing, duplicated, or wrongly marked pending.
@@ -49,3 +49,11 @@ Redeploy after adding or changing environment variables. Vercel's Environment Va
 Update `CACHE` in `sw.js` whenever shipping a changed app. Installed PWAs will update their programme and certificate template when online.
 
 **Source note:** The supplied brochure page 2 was minimally amended to replace the outdated “Applied For” text with MMC-approved CPD points and code. All other brochure content is retained. Day One continues to show “High Tea” on the supplied programme PDF while the app uses the committee-selected “Inaugural Tea.”
+
+## Final certificate approval (17 October 2026)
+
+- **Only two live certificate artworks:** `assets/DEFORTHOCON_2026_Delegate_Certificate_Approved_17Oct2026.png` and `assets/DEFORTHOCON_2026_Faculty_Certificate_Approved_17Oct2026.png`. Both preserve their existing reviewed pixel content (no lossy re-encoding during the finalisation rename).
+- **Approved source:** user-supplied `Final Certificates with observer name 17 Oct 2026.pptx` (SHA-256 `a5baee8cdc033d09da173313d1115318c5783479ad2c48f38cbfeae7a114f11f`), reviewed alongside the final live watermarked proof. The editable PowerPoint remains the approval record; it is not committed to this public website repository.
+- Three real authorised signatories retained. Observer identification and MMC CPD code retained **without observer digital signature**.
+- Test certificates retain the conspicuous `TEST ONLY` watermark. The private attendance-record gate and the 17 October 2026, 17:00 IST release restriction are unchanged.
+- Prior file contents can still be seen in Git history for audit purposes, but no superseded certificate artwork path remains in the active branch.
