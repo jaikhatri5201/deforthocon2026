@@ -75,51 +75,22 @@ async function download(){
   const c=document.createElement('canvas');c.width=bg.naturalWidth;c.height=bg.naturalHeight;
   const ctx=c.getContext('2d',{alpha:false});ctx.drawImage(bg,0,0,c.width,c.height);
   const w=c.width,h=c.height;
-  // 17 October 2026: observer-approved Faculty and Delegate master,
-  // transcribed from the two-slide approved PPTX. The existing logos, frame,
-  // authorised signatures and issue date remain on the category artwork.
-  // Replace superseded text from the previous master; do not alter the art.
-  const paper='#faf7f0',maroon='#860020',navy='#1a2a54',ink='#3c3c3c';
-  const shade=(x1,y1,x2,y2)=>{ctx.fillStyle=paper;ctx.fillRect(w*x1,h*y1,w*(x2-x1),h*(y2-y1));};
-  // Mask only the dynamic central content; the first signature begins below this area.
-  shade(.10,.440,.90,.783);
-  const serif='Georgia, "Times New Roman", serif';
-  function line(value,x,y,pt,maxWidth,options={}){
-    let size=pt*w/841.89;
-    const style=(options.italic?'italic ':'')+(options.bold?'bold ':'');
-    ctx.textAlign=options.align||'center';ctx.textBaseline='middle';
-    ctx.fillStyle=options.color||navy;
-    while(size>=w*.011){
-      ctx.font=style+size+'px '+(options.font||serif);
-      if(ctx.measureText(value).width<=w*maxWidth)break;
-      size-=1;
-    }
-    ctx.fillText(value,w*x,h*y);
-  }
-  line('This is to certify that,',.495,.472,20,.52,{italic:true});
+  // The two observer-approved PNGs contain ALL fixed certificate wording,
+  // CPD points, CPD code, logos, names/designations and authentic signatures.
+  // Never mask or redraw any of that approved artwork. The ONLY additions
+  // are the verified attendee name and the unique certificate number.
+  const ink='#3c3c3c',maroon='#860020';
   const nameSize=30*w/841.89;
-  if(document.fonts?.load){try{await document.fonts.load('italic '+nameSize+'px '+attendeeNameFont,cert.name);}catch{}}
-  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.527,pt:nameSize,minPt:w*.021,width:w*.47,
+  if(document.fonts?.load){try{await document.fonts.load(`italic ${nameSize}px ${attendeeNameFont}`,cert.name);}catch{}}
+  drawFittedText(ctx,cert.name,{x:w*.495,y:h*.527,pt:nameSize,minPt:w*.021,width:w*.57,
     color:maroon,font:attendeeNameFont,weight:'italic'});
-  ctx.beginPath();ctx.moveTo(w*.295,h*.564);ctx.lineTo(w*.705,h*.564);
-  ctx.strokeStyle='#c59547';ctx.lineWidth=Math.max(1,w*.0011);ctx.stroke();
-  line('has attended DEFORTHOCON 2026',.495,.595,19,.65,{bold:true,color:maroon});
-  line('held at Military Hospital Khadki, Pune on 16 – 17 October 2026.',.495,.642,16,.79);
-  const isFaculty=cert.category==='faculty';
-  line('Your participation as '+(isFaculty?'faculty':'a delegate')+' is acknowledged and appreciated.',
-    .495,.683,16,.79,{italic:true});
-  line('Maharashtra Medical Council has approved '+(isFaculty?'05':'04')+
-    ' CPD credit points for '+(isFaculty?'faculty.':'delegates.'),
-    .495,.720,12.8,.79,{bold:true,color:maroon});
-  line('MMC CPD Code Number: MMC/MAC/2026/D-025865   •   NO: MMC/Accre.Cert/SPA-0334/2015 / 09 Oct 2026',
-    .495,.757,11.6,.82,{color:ink});
-  // FINAL PPT FIDELITY: The 17 Oct observer-approved background already embeds
-  // all three authentic high-resolution signature images, names, and designations.
-  // IMPORTANT: NEVER white-out, crop, redraw, reposition, or scale those signatures.
-  // Retain the lower signatory and MMC observer panel pixel-for-pixel as supplied.
-  // Only the attendee's unique certificate number is added to the blank number slot.
-  shade(.185,.935,.342,.972);
-  line(cert.certificateNo,.190,.956,11.8,.147,{align:'left',color:ink});
+  const numberSize=11.8*w/841.89;
+  ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillStyle=ink;
+  ctx.font=`${numberSize}px Georgia, "Times New Roman", serif`;
+  if(ctx.measureText(cert.certificateNo).width>w*.18){
+    throw new Error('The certificate number is too long for the approved layout. Contact the organiser.');
+  }
+  ctx.fillText(cert.certificateNo,w*.190,h*.956);
   if(cert.testOnly){
     ctx.save();ctx.translate(w/2,h/2);ctx.rotate(-0.25);
     ctx.fillStyle='rgba(170,23,45,0.27)';ctx.textAlign='center';ctx.font=`bold ${w*.095}px Arial, sans-serif`;
